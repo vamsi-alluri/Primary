@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#Loginus{
+			background-color: lightgreen;
+			display: flex;
+			float: left;
+		}
+		#btn{
+			width: 100px;
+			height: 20px;
+		}
+	</style>
+	<meta charset="utf-8">
+	<title>Login</title>
+</head>
+<body>
+	<form name="myform">
+		<input id="Username" type="text" placeholder="Username"><br><br>
+		<input id="Password" type="password" placeholder="Password"><br>
+		<button id="btn" onclick="ValidateEmail(this)">Sign In</button>
+		<script type="text/javascript">
+
+			function ValidateEmail(){
+				console.log("validateEmail");
+				var jobValue = document.getElementById('Username').value
+				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(jobValue))
+			  	{
+			    	alert("Email id valid");
+			  	}
+			  	else{
+			    	alert("You have entered an invalid email address!");
+			    	return (false);
+			    }
+			}
+
+			function ValidatePassword(){
+
+			}
+		</script>
+	</form>
+
+</body>
+</html>
